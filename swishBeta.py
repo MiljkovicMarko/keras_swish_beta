@@ -13,7 +13,7 @@ class SwishBeta(Layer):
     def __init__(self, trainable_beta = False, beta_initializer = 'ones', **kwargs):
         super(SwishBeta, self).__init__(**kwargs)
         self.supports_masking = True
-        self.trainable = trainable_beta
+        self.trainable_beta = trainable_beta
         self.beta_initializer = initializers.get(beta_initializer)
         
     def build(self, input_shape):
